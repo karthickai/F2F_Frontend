@@ -1,5 +1,16 @@
 <template>
   <div>
-    <h1>This is an Dashboard page</h1>
+    <uploader></uploader>
   </div>
 </template>
+
+<script>
+import Uploader from '@/components/Uploader.vue'
+export default {
+  components: {
+    Uploader
+  }
+}
+</script>
+
+<style lang="scss" scoped></style>
