@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <h1>Video Page Comming Soon</h1>
+  </div>
 </template>
 
 <script>

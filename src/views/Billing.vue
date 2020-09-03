@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <h1>Billing Page Comming Soon</h1>
+  </div>
 </template>
 
 <script>

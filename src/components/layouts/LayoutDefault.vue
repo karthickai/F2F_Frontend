@@ -1,23 +1,22 @@
 <template>
   <v-app id="inspire" class="app dashboard">
-    <app-drawer class="app--drawer" :show-drawer="showDrawer" />
     <app-toolbar class="app--toolbar" @side-icon-click="handleDrawerVisiable" />
     <v-main>
       <!-- Page Header -->
-      <div class="page-wrapper"><router-view /></div>
+      <div class="page-wrapper">
+        <router-view />
+      </div>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import AppDrawer from '@/components/AppDrawer'
 import AppToolbar from '@/components/AppToolbar'
 // import AppFab from '@/components/AppFab'
 
 export default {
   name: 'LayoutDefault',
   components: {
-    AppDrawer,
     AppToolbar
     // AppFab
   },

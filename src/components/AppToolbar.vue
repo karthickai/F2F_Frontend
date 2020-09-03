@@ -1,12 +1,13 @@
 <template>
-  <v-app-bar color="primary" dark app>
-    <v-app-bar-nav-icon @click="handleDrawerToggle" />
+  <v-app-bar color="primary" dark flat="true" app>
+    <v-img class="mx-3 mt-6" src="@/assets/logo.png" max-height="150" max-width="200" contain></v-img>
+
     <v-spacer />
     <v-toolbar-items>
       <v-menu offset-y origin="center center" transition="scale-transition">
         <template v-slot:activator="{ on }">
           <v-btn icon large text slot="activator" v-on="on">
-            <v-avatar size="30px">
+            <v-avatar size="32px">
               <img src="@/assets/man_4.jpg" alt="Michael Wang" />
             </v-avatar>
           </v-btn>
@@ -24,7 +25,7 @@
             :key="index"
           >
             <v-list-item-action v-if="item.icon">
-              <v-icon> {{ item.icon }} </v-icon>
+              <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -63,30 +64,8 @@ export default {
       ]
     }
   },
-  computed: {
-    toolbarColor() {
-      return this.$vuetify.options.extra.mainNav
-    },
-    breadcrumbs() {
-      const { matched } = this.$route
-      return matched.map((route, index) => {
-        const to =
-          index === matched.length - 1
-            ? this.$route.path
-            : route.path || route.redirect
-        return {
-          text: route.meta.title,
-          to: to,
-          exact: true,
-          disabled: false
-        }
-      })
-    }
-  },
+  computed: {},
   methods: {
-    handleDrawerToggle() {
-      this.$emit('side-icon-click')
-    },
     handleLogut() {
       //   this.$router.push('/auth/login')
     },
